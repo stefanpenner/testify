@@ -432,7 +432,10 @@ func Equal(t TestingT, expected, actual interface{}, msgAndArgs ...interface{}) 
 	}
 
 	return true
+}
 
+func StefEqual(t TestingT, expected, actual interface{}, msgAndArgs ...interface{}) bool {
+	return Equal(t, expected, actual, msgAndArgs)
 }
 
 // validateEqualArgs checks whether provided arguments can be safely used in the
